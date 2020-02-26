@@ -1,0 +1,8 @@
+{
+  "domain": "stib_mivb",
+  "name": "stib_mivb",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": ["pyodstibmivb>=0.9.1"]
+}
