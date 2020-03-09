@@ -105,7 +105,7 @@ class StibMivbSensor(Entity):
     async def async_update(self):
         """Get the latest data from the StibMivb API."""
         if self._stop_name is None:
-            stop_name = await self.api.get_point_detail(self.line_id)
+            stop_name = await self.api.get_point_detail(self.stop_id)
             self._stop_name = stop_name["points"][0]["name"][self.lang]
             self._attributes["stop_name"] = self._stop_name
         self._name = self._stop_name + " line " + self.line_id
