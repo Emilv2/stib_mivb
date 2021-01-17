@@ -22,16 +22,20 @@ Then configure the sensors by setting up the stib platform in `configuration.yam
 
 ```yaml
 sensor:
-  - platform: stib_mivb   
+  - platform: stib_mivb
     api_key: '< STIB access token from opendata.stib-mivb.be >'
     lang: 'nl'   
     message_lang: 'en'   
     stops:
       - stop_id: 8301
-        line_number: 6
-      - stop_id: 8301
-        line_number: 2
-
+        line_numbers: 
+          - 6
+          - 32
+      - stop_id: 5151
+        line_numbers:
+          - 82
+          - 97
+          - 32
 ```
 
 ## Info
