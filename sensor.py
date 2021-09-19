@@ -1,4 +1,3 @@
-
 """Support for STIB-MIVB (Brussels public transport) information."""
 import datetime
 import logging
@@ -53,6 +52,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     }
 )
 
+
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     """Create the sensor."""
     api_key = config[CONF_API_KEY]
@@ -78,6 +78,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         )
 
     async_add_entities(sensors, True)
+
 
 class StibMivbSensor(Entity):
     """Representation of Stib-Mivb public transport sensor."""
@@ -113,9 +114,8 @@ class StibMivbSensor(Entity):
             waiting_time_response = await self.api.get_waiting_time(self.stop_id)
         except HttpException:
             _LOGGER.error(
-                "Http Error getting waiting time for stop %s. %s. %s"(
-                    self.stop_id, HttpException, HttpException.text
-                )
+                "Http Error getting waiting time for stop %s. %s. %s",
+                (self.stop_id, HttpException, HttpException.text),
             )
         try:
             messages_response = await self.api.get_message_by_line(*self.line_ids)
@@ -226,4 +226,4 @@ class StibMivbSensor(Entity):
     @property
     def device_state_attributes(self):
         """Return attributes for the sensor."""
-        return self._attributes   
+        return self._attributes
