@@ -8,6 +8,10 @@ Copy these files to custom_components/stib_mivb/
 
 Then configure the sensors by setting up the stib platform in `configuration.yaml`.
 
+## Register
+
+Register on opendat.stib-mivb.be to get your api_key. You need to register your key for the NetworkDescription and OperationMonitoring api.
+
 ## Options
 
 | Name | Type | Requirement | Description
