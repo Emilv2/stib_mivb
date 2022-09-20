@@ -224,6 +224,6 @@ class StibMivbSensor(Entity):
         return self.__icon
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return attributes for the sensor."""
         return self._attributes
