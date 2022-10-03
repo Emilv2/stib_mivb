@@ -10,7 +10,7 @@ Then configure the sensors by setting up the stib platform in `configuration.yam
 
 ## Register
 
-Register on opendata.stib-mivb.be to get your api_key. You need to register your key for the NetworkDescription and OperationMonitoring api.
+Register on[ data.stib-mivb.be](https://data.stib-mivb.be) to get your api_key. You need to register your key for the NetworkDescription and OperationMonitoring api.
 
 ## Options
 
